@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icono_enviar_alerta_policia.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

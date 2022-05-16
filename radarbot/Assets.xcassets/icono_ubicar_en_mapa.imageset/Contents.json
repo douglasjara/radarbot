@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icono_ubicar_en_mapa.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
