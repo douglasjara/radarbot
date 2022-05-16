@@ -18,6 +18,7 @@
                 <outlet property="stackViewDescripcion" destination="znj-JG-aN0" id="8Az-oI-C1b"/>
                 <outlet property="textFieldDescripcionAlerta" destination="9fD-S9-T4F" id="Buh-kv-ZI6"/>
                 <outlet property="textViewTipoAlerta" destination="Bhf-qv-0PA" id="gGO-3s-tVK"/>
+                <outlet property="textViewUbicacion" destination="kaX-J1-Pw9" id="kSo-Yu-1y6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lOA-Ra-opl"/>
             </connections>
         </placeholder>
@@ -167,6 +168,9 @@
                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
                                         <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="ubicarEnMapa" destination="-1" eventType="touchUpInside" id="0ul-n7-2X1"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

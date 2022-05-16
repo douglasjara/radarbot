@@ -7,9 +7,10 @@
 
 import UIKit
 
-class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate {
-      
+class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate, MapViewControllerDelegate {
+     
     private let alertService: AlertService
+    private let mapViewController = MapViewController(nibName: "MapView", bundle: nil)
     private var tiposAlerta: [AlertType] = AlertType.allCases
     private var currentPage = 0
     private var selectedAlert: AlertType? = nil
@@ -24,11 +25,14 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var pageControlAlertas: UIPageControl!
     @IBOutlet weak var textFieldDescripcionAlerta: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var textViewUbicacion: UITextView!
     
     @IBAction func enviarAlerta(_ sender: UIButton) {
         guard let alert = self.selectedAlert else { return }
         let descripcion = textFieldDescripcionAlerta.text
         textFieldDescripcionAlerta.text = ""
+        textViewUbicacion.text = ""
+        textViewTipoAlerta.text = "Selecciona una alerta..."
         selectedAlert = nil
         collectionViewAlertas.reloadData()
         validateToEnableButton()
@@ -39,10 +43,16 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         alertService.notifyAlert(latitude: self.latitude, longitude: self.longitude, alertType: alert.id(), text: descripcion ?? alert.rawValue)
     }
     
+    @IBAction func ubicarEnMapa() {
+        present(self.mapViewController, animated: true)
+    }
+    
+    
     init(alertService: AlertService) {
         self.alertService = alertService
         super.init(nibName: "NewAlertView", bundle: nil)
         self.alertService.delegate = self
+        self.mapViewController.delegate = self
     }
        
     required convenience init?(coder: NSCoder) {
@@ -54,6 +64,14 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         
         configureUIElements()
         setAlertas()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     private func configureUIElements() {
@@ -84,14 +102,14 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         present(ac, animated: true)
     }
     
-    //Delegate
+    // MARK: - Delegate
     func alertServiceDelegateDidUpdate(_: AlertService) {
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         showDialog()
     }
     
-    // * Datasource
+    // MARK: -  Datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tiposAlerta.count
     }
@@ -129,16 +147,22 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.uncheck()
     }
     
-    // FlowLayout
+    // MARK: -  FlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 128, height: 128)
     }
     
-    //Pager
+    // MARK: - Pager
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentPage = Int((scrollView.contentOffset.x + width / 2) / width)
         pageControlAlertas.currentPage = currentPage
+    }
+    
+    // MARK: - MapViewControllerDelegate
+    func MapViewControllerDelegateDidUpdate(_: MapViewController) {
+        self.latitude = self.mapViewController.lastAnnotation!.latitude
+        self.longitude = self.mapViewController.lastAnnotation!.longitude
     }
 }
 

@@ -10,6 +10,9 @@
 		CF590464283266B0001374A6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF590463283266B0001374A6 /* APIManager.swift */; };
 		CF5904662832679A001374A6 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5904652832679A001374A6 /* AlertService.swift */; };
 		CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59046828326880001374A6 /* DummyServiceSettings.swift */; };
+		CF59046C2832AB16001374A6 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF59046B2832AB16001374A6 /* MapView.xib */; };
+		CF59046E2832C1A5001374A6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59046D2832C1A5001374A6 /* MapViewController.swift */; };
+		CF5904722832CAF3001374A6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5904712832CAF3001374A6 /* Annotation.swift */; };
 		CFC3DB2A2830A2B5007A2E44 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */; };
 		CFC3DB2C2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */; };
 		CFC3DB2E2830A476007A2E44 /* AlertTypeCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */; };
@@ -28,6 +31,9 @@
 		CF590463283266B0001374A6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CF5904652832679A001374A6 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		CF59046828326880001374A6 /* DummyServiceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServiceSettings.swift; sourceTree = "<group>"; };
+		CF59046B2832AB16001374A6 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		CF59046D2832C1A5001374A6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CF5904712832CAF3001374A6 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTypeCustomViewCell.swift; sourceTree = "<group>"; };
 		CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTypeCustomView.xib; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				CFDA18D9282E771D00758C20 /* NewAlertViewController.swift */,
+				CF59046D2832C1A5001374A6 /* MapViewController.swift */,
+				CF5904712832CAF3001374A6 /* Annotation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -77,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				CFDA18F0282FD73800758C20 /* NewAlertView.xib */,
+				CF59046B2832AB16001374A6 /* MapView.xib */,
 				CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */,
 				CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */,
 			);
@@ -196,6 +205,7 @@
 				CFDA18F1282FD73800758C20 /* NewAlertView.xib in Resources */,
 				CFDA18E2282E772100758C20 /* LaunchScreen.storyboard in Resources */,
 				CFDA18DF282E772100758C20 /* Assets.xcassets in Resources */,
+				CF59046C2832AB16001374A6 /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +220,11 @@
 				CF590464283266B0001374A6 /* APIManager.swift in Sources */,
 				CFDA18EC282FBEEA00758C20 /* AlertType.swift in Sources */,
 				CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */,
+				CF5904722832CAF3001374A6 /* Annotation.swift in Sources */,
 				CFDA18D6282E771D00758C20 /* AppDelegate.swift in Sources */,
 				CF5904662832679A001374A6 /* AlertService.swift in Sources */,
 				CFDA18EA282FBE1200758C20 /* Alert.swift in Sources */,
+				CF59046E2832C1A5001374A6 /* MapViewController.swift in Sources */,
 				CFC3DB2C2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift in Sources */,
 				CFC3DB2A2830A2B5007A2E44 /* UIViewExtension.swift in Sources */,
 				CFDA18EE282FD03B00758C20 /* Response.swift in Sources */,
