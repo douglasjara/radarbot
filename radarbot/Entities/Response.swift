@@ -7,6 +7,6 @@
 
 struct Response: Codable
 {
-    var error: Int
-    var message: String
+    var error: Int?
+    var message: String?
 }

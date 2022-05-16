@@ -10,7 +10,6 @@ import UIKit
 @IBDesignable
 final class AlertTypeCustomViewCell: UICollectionViewCell
 {
-    
     @IBOutlet private weak var alertIconImageView: UIImageView!
     @IBOutlet private weak var checkIcon: UIImageView!
     

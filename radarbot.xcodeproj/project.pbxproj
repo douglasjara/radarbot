@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF590464283266B0001374A6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF590463283266B0001374A6 /* APIManager.swift */; };
+		CF5904662832679A001374A6 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5904652832679A001374A6 /* AlertService.swift */; };
+		CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59046828326880001374A6 /* DummyServiceSettings.swift */; };
 		CFC3DB2A2830A2B5007A2E44 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */; };
 		CFC3DB2C2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */; };
 		CFC3DB2E2830A476007A2E44 /* AlertTypeCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF590463283266B0001374A6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CF5904652832679A001374A6 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		CF59046828326880001374A6 /* DummyServiceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServiceSettings.swift; sourceTree = "<group>"; };
 		CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTypeCustomViewCell.swift; sourceTree = "<group>"; };
 		CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTypeCustomView.xib; sourceTree = "<group>"; };
@@ -49,13 +55,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF5904672832679F001374A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF590463283266B0001374A6 /* APIManager.swift */,
+				CF5904652832679A001374A6 /* AlertService.swift */,
+				CF59046828326880001374A6 /* DummyServiceSettings.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF59046A28326DE7001374A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFDA18D9282E771D00758C20 /* NewAlertViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CFC3DB2F2830AA6D007A2E44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CFDA18F0282FD73800758C20 /* NewAlertView.xib */,
 				CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */,
 				CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */,
-				CFDA18D9282E771D00758C20 /* NewAlertViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,8 +110,10 @@
 		CFDA18D4282E771D00758C20 /* radarbot */ = {
 			isa = PBXGroup;
 			children = (
+				CF5904672832679F001374A6 /* Services */,
 				CFDA18EF282FD09600758C20 /* Entities */,
 				CFC3DB2F2830AA6D007A2E44 /* Views */,
+				CF59046A28326DE7001374A6 /* Controllers */,
 				CFC3DB302830AA8F007A2E44 /* Extensions */,
 				CFDA18D5282E771D00758C20 /* AppDelegate.swift */,
 				CFDA18D7282E771D00758C20 /* SceneDelegate.swift */,
@@ -182,8 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFDA18DA282E771D00758C20 /* NewAlertViewController.swift in Sources */,
+				CF590464283266B0001374A6 /* APIManager.swift in Sources */,
 				CFDA18EC282FBEEA00758C20 /* AlertType.swift in Sources */,
+				CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */,
 				CFDA18D6282E771D00758C20 /* AppDelegate.swift in Sources */,
+				CF5904662832679A001374A6 /* AlertService.swift in Sources */,
 				CFDA18EA282FBE1200758C20 /* Alert.swift in Sources */,
 				CFC3DB2C2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift in Sources */,
 				CFC3DB2A2830A2B5007A2E44 /* UIViewExtension.swift in Sources */,

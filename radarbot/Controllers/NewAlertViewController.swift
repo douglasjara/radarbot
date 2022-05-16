@@ -7,8 +7,15 @@
 
 import UIKit
 
-class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate {
+      
+    private let alertService: AlertService
+    private var tiposAlerta: [AlertType] = AlertType.allCases
+    private var currentPage = 0
+    private var selectedAlert: AlertType? = nil
+    var latitude = 1.0
+    var longitude = 1.0
+    
     @IBOutlet weak var stackViewDescripcion: UIStackView!
     @IBOutlet weak var textViewTipoAlerta: UITextView!
     @IBOutlet weak var buttonUbicarEnMapa: UIButton!
@@ -16,11 +23,31 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var collectionViewAlertas: UICollectionView!
     @IBOutlet weak var pageControlAlertas: UIPageControl!
     @IBOutlet weak var textFieldDescripcionAlerta: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBAction func enviarAlerta(_ sender: UIButton) {
+        guard let alert = self.selectedAlert else { return }
+        let descripcion = textFieldDescripcionAlerta.text
+        textFieldDescripcionAlerta.text = ""
+        selectedAlert = nil
+        collectionViewAlertas.reloadData()
+        validateToEnableButton()
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+        alertService.notifyAlert(latitude: self.latitude, longitude: self.longitude, alertType: alert.id(), text: descripcion ?? alert.rawValue)
+    }
     
-    private var tiposAlerta: [AlertType] = AlertType.allCases
-    private var currentPage = 0
-    private var selectedAlert: AlertType? = nil
+    init(alertService: AlertService) {
+        self.alertService = alertService
+        super.init(nibName: "NewAlertView", bundle: nil)
+        self.alertService.delegate = self
+    }
+       
+    required convenience init?(coder: NSCoder) {
+        self.init(alertService: AlertService())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +75,22 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionViewAlertas.delegate = self
     }
     
+    private func showDialog() {
+        let title = alertService.response.error == 99 ? "Error" : "Envío correcto"
+        let message = alertService.response.message
+        
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Entiendo", style: .default))
+        present(ac, animated: true)
+    }
+    
+    //Delegate
+    func alertServiceDelegateDidUpdate(_: AlertService) {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        showDialog()
+    }
+    
     // * Datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tiposAlerta.count
@@ -72,8 +115,12 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func validateToEnableButton() {
+        if selectedAlert != nil {
+            buttonEnviarAlerta.isEnabled = true
+            return
+        }
         
-        buttonEnviarAlerta.isEnabled = true
+        buttonEnviarAlerta.isEnabled = false
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

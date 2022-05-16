@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAlertViewController" customModule="radarbot" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="TJT-Ct-hLd" id="zHr-2M-LV9"/>
                 <outlet property="buttonEnviarAlerta" destination="Ofh-Nm-nTp" id="nov-s2-nbC"/>
                 <outlet property="buttonUbicarEnMapa" destination="uNc-xQ-xjE" id="YUx-cX-zrj"/>
                 <outlet property="collectionViewAlertas" destination="FnK-9I-B1s" id="Owm-Bg-YDs"/>
@@ -25,6 +26,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
+                <activityIndicatorView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TJT-Ct-hLd">
+                    <rect key="frame" x="0.0" y="44" width="342.5" height="818"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JGS-0Y-BTN" userLabel="Stack View Contenedor">
                     <rect key="frame" x="0.0" y="44" width="342.5" height="818"/>
                     <subviews>
@@ -178,6 +184,9 @@
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="enviarAlerta:" destination="-1" eventType="touchUpInside" id="scu-z3-dKU"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -188,10 +197,14 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fE2-7c-CKP" firstAttribute="trailing" secondItem="TJT-Ct-hLd" secondAttribute="trailing" id="9mC-YA-i66"/>
                 <constraint firstItem="JGS-0Y-BTN" firstAttribute="leading" secondItem="fE2-7c-CKP" secondAttribute="leading" id="AxN-Ih-WOm"/>
                 <constraint firstItem="fE2-7c-CKP" firstAttribute="bottom" secondItem="JGS-0Y-BTN" secondAttribute="bottom" id="DbZ-FV-CTX"/>
+                <constraint firstItem="TJT-Ct-hLd" firstAttribute="leading" secondItem="fE2-7c-CKP" secondAttribute="leading" id="JmK-pd-hK3"/>
                 <constraint firstItem="JGS-0Y-BTN" firstAttribute="top" secondItem="fE2-7c-CKP" secondAttribute="top" id="LVW-4v-PvS"/>
                 <constraint firstItem="JGS-0Y-BTN" firstAttribute="trailing" secondItem="fE2-7c-CKP" secondAttribute="trailing" id="ki4-Dz-PEu"/>
+                <constraint firstItem="TJT-Ct-hLd" firstAttribute="top" secondItem="fE2-7c-CKP" secondAttribute="top" id="uf6-Y6-xCg"/>
+                <constraint firstItem="fE2-7c-CKP" firstAttribute="bottom" secondItem="TJT-Ct-hLd" secondAttribute="bottom" id="who-Is-AlC"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </view>
