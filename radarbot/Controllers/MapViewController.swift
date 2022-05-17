@@ -40,6 +40,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         checkLocationServices()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let last = self.lastAnnotation {
+            self.mapView.deselectAnnotation(last, animated: true)
+            self.mapView.removeAnnotation(last)
+            self.mapView.reloadInputViews()
+        }
+        
+        self.lastAnnotation = nil
+        self.buttonAceptar.isEnabled = false
+    }
+    
     //MARK: - Location Manager
     
     func checkLocationServices()
@@ -131,6 +144,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         buttonAceptar.isEnabled = true
         
         return
+    }
+    
+    //MARK: - Reverse geocoding
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        if let coordinate = self.lastAnnotation?.coordinate {
+            let location = CLLocation(latitude: coordinate.latitude , longitude: coordinate.longitude)
+            let geoCoder = CLGeocoder()
+            
+            geoCoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
+                guard let self = self else { return }
+                
+                if let error = error { return }
+                
+                guard let placemark = placemarks?.first else { return }
+                
+                let streetName = placemark.thoroughfare ?? "Calle sin nombre"
+                let streetNumber = placemark.subThoroughfare ?? "S/N"
+                let city = placemark.locality ?? "Ciudad"
+                let country = placemark.country ?? "País"
+                
+                self.lastAnnotation!.address = "\(streetName) \(streetNumber), \(city), \(country)"
+            }
+        }
     }
 }
 

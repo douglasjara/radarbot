@@ -163,6 +163,10 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
     func MapViewControllerDelegateDidUpdate(_: MapViewController) {
         self.latitude = self.mapViewController.lastAnnotation!.latitude
         self.longitude = self.mapViewController.lastAnnotation!.longitude
+        
+        DispatchQueue.main.async {
+            self.textViewUbicacion.text = self.mapViewController.lastAnnotation!.address
+        }
     }
 }
 

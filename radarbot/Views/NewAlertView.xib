@@ -95,7 +95,7 @@
                                 <constraint firstItem="znj-JG-aN0" firstAttribute="bottom" secondItem="Bhf-qv-0PA" secondAttribute="top" constant="-10" id="z1h-ij-agP"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nsq-9p-VKw" userLabel="Stack View Collection View">
+                        <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nsq-9p-VKw" userLabel="Stack View Collection View">
                             <rect key="frame" x="0.0" y="234.5" width="342.5" height="336"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnK-9I-B1s">
@@ -123,38 +123,28 @@
                                 <constraint firstItem="Fnf-WW-lEV" firstAttribute="top" secondItem="FnK-9I-B1s" secondAttribute="bottom" constant="10" id="PIS-V9-gvt"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-rz-DLc" userLabel="Stack View Ubicacion">
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-rz-DLc" userLabel="Stack View Ubicacion">
                             <rect key="frame" x="0.0" y="644.5" width="342.5" height="50"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="c6O-xz-cdB">
-                                    <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-xz-cdB">
+                                    <rect key="frame" x="0.0" y="0.0" width="203" height="50"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="56c-9G-NX8">
-                                            <rect key="frame" x="0.0" y="0.0" width="165" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56c-9G-NX8">
+                                            <rect key="frame" x="0.0" y="0.0" width="202.5" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" id="kaX-J1-Pw9">
-                                            <rect key="frame" x="0.0" y="14.5" width="165" height="35.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <textView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" text="." translatesAutoresizingMaskIntoConstraints="NO" id="kaX-J1-Pw9">
+                                            <rect key="frame" x="0.0" y="14.5" width="202.5" height="35.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="Calle ValparaisoCalle ValparaisoCalle ValparaisoCalle Valparaiso">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" metaFont="system" size="16"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="11"/>
                                             <textInputTraits key="textInputTraits" smartDashesType="yes" textContentType="street-address"/>
                                             <dataDetectorType key="dataDetectorTypes" address="YES"/>
                                         </textView>
                                     </subviews>
-                                    <viewLayoutGuide key="safeArea" id="fYs-mt-fhr"/>
                                 </stackView>
                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uNc-xQ-xjE">
                                     <rect key="frame" x="212.5" y="0.0" width="130" height="50"/>

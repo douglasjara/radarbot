@@ -14,6 +14,7 @@ class Annotation: NSObject, MKAnnotation
     var latitude : Double
     var longitude : Double
     var identifier : Int
+    var address : String
     var coordinate : CLLocationCoordinate2D
     {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -25,5 +26,6 @@ class Annotation: NSObject, MKAnnotation
         self.latitude = latitude
         self.longitude = longitude
         self.identifier = ident
+        self.address = ""
     }
 }
