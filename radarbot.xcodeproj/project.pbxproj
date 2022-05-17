@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF3056BC28335E370041443C /* Pods_radarbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */; };
+		CF3056BD28335E370041443C /* Pods_radarbot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF590464283266B0001374A6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF590463283266B0001374A6 /* APIManager.swift */; };
+		CF5904662832679A001374A6 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5904652832679A001374A6 /* AlertService.swift */; };
+		CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59046828326880001374A6 /* DummyServiceSettings.swift */; };
+		CF59046C2832AB16001374A6 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF59046B2832AB16001374A6 /* MapView.xib */; };
+		CF59046E2832C1A5001374A6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59046D2832C1A5001374A6 /* MapViewController.swift */; };
+		CF5904722832CAF3001374A6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5904712832CAF3001374A6 /* Annotation.swift */; };
+		CFC3DB2A2830A2B5007A2E44 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */; };
+		CFC3DB2C2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */; };
+		CFC3DB2E2830A476007A2E44 /* AlertTypeCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */; };
+		CFDA18D6282E771D00758C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA18D5282E771D00758C20 /* AppDelegate.swift */; };
+		CFDA18D8282E771D00758C20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA18D7282E771D00758C20 /* SceneDelegate.swift */; };
+		CFDA18DA282E771D00758C20 /* NewAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA18D9282E771D00758C20 /* NewAlertViewController.swift */; };
+		CFDA18DF282E772100758C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDA18DE282E772100758C20 /* Assets.xcassets */; };
+		CFDA18E2282E772100758C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDA18E0282E772100758C20 /* LaunchScreen.storyboard */; };
+		CFDA18EA282FBE1200758C20 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA18E9282FBE1200758C20 /* Alert.swift */; };
+		CFDA18EC282FBEEA00758C20 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA18EB282FBEE900758C20 /* AlertType.swift */; };
+		CFDA18EE282FD03B00758C20 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA18ED282FD03B00758C20 /* Response.swift */; };
+		CFDA18F1282FD73800758C20 /* NewAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDA18F0282FD73800758C20 /* NewAlertView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CF3056BE28335E370041443C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF3056BD28335E370041443C /* Pods_radarbot.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_radarbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A44FFF4F3285371F2777E33 /* Pods-radarbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radarbot.release.xcconfig"; path = "Target Support Files/Pods-radarbot/Pods-radarbot.release.xcconfig"; sourceTree = "<group>"; };
+		CF590463283266B0001374A6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CF5904652832679A001374A6 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		CF59046828326880001374A6 /* DummyServiceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServiceSettings.swift; sourceTree = "<group>"; };
+		CF59046B2832AB16001374A6 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		CF59046D2832C1A5001374A6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CF5904712832CAF3001374A6 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTypeCustomViewCell.swift; sourceTree = "<group>"; };
+		CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTypeCustomView.xib; sourceTree = "<group>"; };
+		CFDA18D2282E771D00758C20 /* radarbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radarbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDA18D5282E771D00758C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFDA18D7282E771D00758C20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CFDA18D9282E771D00758C20 /* NewAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlertViewController.swift; sourceTree = "<group>"; };
+		CFDA18DE282E772100758C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFDA18E1282E772100758C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFDA18E3282E772100758C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFDA18E9282FBE1200758C20 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CFDA18EB282FBEE900758C20 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		CFDA18ED282FD03B00758C20 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CFDA18F0282FD73800758C20 /* NewAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewAlertView.xib; sourceTree = "<group>"; };
+		E65189CD330C1CCD63079241 /* Pods-radarbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radarbot.debug.xcconfig"; path = "Target Support Files/Pods-radarbot/Pods-radarbot.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFDA18CF282E771D00758C20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3056BC28335E370041443C /* Pods_radarbot.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63FA14D88CFAB6EFEBF20F61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E65189CD330C1CCD63079241 /* Pods-radarbot.debug.xcconfig */,
+				5A44FFF4F3285371F2777E33 /* Pods-radarbot.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF5904672832679F001374A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF590463283266B0001374A6 /* APIManager.swift */,
+				CF5904652832679A001374A6 /* AlertService.swift */,
+				CF59046828326880001374A6 /* DummyServiceSettings.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF59046A28326DE7001374A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFDA18D9282E771D00758C20 /* NewAlertViewController.swift */,
+				CF59046D2832C1A5001374A6 /* MapViewController.swift */,
+				CF5904712832CAF3001374A6 /* Annotation.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CFC3DB2F2830AA6D007A2E44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CFDA18F0282FD73800758C20 /* NewAlertView.xib */,
+				CF59046B2832AB16001374A6 /* MapView.xib */,
+				CFC3DB2D2830A476007A2E44 /* AlertTypeCustomView.xib */,
+				CFC3DB2B2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFC3DB302830AA8F007A2E44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFC3DB292830A2B5007A2E44 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFDA18C9282E771D00758C20 = {
+			isa = PBXGroup;
+			children = (
+				CFDA18D4282E771D00758C20 /* radarbot */,
+				CFDA18D3282E771D00758C20 /* Products */,
+				63FA14D88CFAB6EFEBF20F61 /* Pods */,
+				E5E6486C62294DEEAAC4543C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFDA18D3282E771D00758C20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFDA18D2282E771D00758C20 /* radarbot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFDA18D4282E771D00758C20 /* radarbot */ = {
+			isa = PBXGroup;
+			children = (
+				CF5904672832679F001374A6 /* Services */,
+				CFDA18EF282FD09600758C20 /* Entities */,
+				CFC3DB2F2830AA6D007A2E44 /* Views */,
+				CF59046A28326DE7001374A6 /* Controllers */,
+				CFC3DB302830AA8F007A2E44 /* Extensions */,
+				CFDA18D5282E771D00758C20 /* AppDelegate.swift */,
+				CFDA18D7282E771D00758C20 /* SceneDelegate.swift */,
+				CFDA18DE282E772100758C20 /* Assets.xcassets */,
+				CFDA18E0282E772100758C20 /* LaunchScreen.storyboard */,
+				CFDA18E3282E772100758C20 /* Info.plist */,
+			);
+			path = radarbot;
+			sourceTree = "<group>";
+		};
+		CFDA18EF282FD09600758C20 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CFDA18E9282FBE1200758C20 /* Alert.swift */,
+				CFDA18EB282FBEE900758C20 /* AlertType.swift */,
+				CFDA18ED282FD03B00758C20 /* Response.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E5E6486C62294DEEAAC4543C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFDA18D1282E771D00758C20 /* radarbot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDA18E6282E772100758C20 /* Build configuration list for PBXNativeTarget "radarbot" */;
+			buildPhases = (
+				C69094B19B923BE8D974352A /* [CP] Check Pods Manifest.lock */,
+				CFDA18CE282E771D00758C20 /* Sources */,
+				CFDA18CF282E771D00758C20 /* Frameworks */,
+				CFDA18D0282E771D00758C20 /* Resources */,
+				549152FF46D6B897CB5F463F /* [CP] Embed Pods Frameworks */,
+				CF3056BE28335E370041443C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = radarbot;
+			productName = radarbot;
+			productReference = CFDA18D2282E771D00758C20 /* radarbot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFDA18CA282E771D00758C20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CFDA18D1282E771D00758C20 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CFDA18CD282E771D00758C20 /* Build configuration list for PBXProject "radarbot" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFDA18C9282E771D00758C20;
+			productRefGroup = CFDA18D3282E771D00758C20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFDA18D1282E771D00758C20 /* radarbot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFDA18D0282E771D00758C20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC3DB2E2830A476007A2E44 /* AlertTypeCustomView.xib in Resources */,
+				CFDA18F1282FD73800758C20 /* NewAlertView.xib in Resources */,
+				CFDA18E2282E772100758C20 /* LaunchScreen.storyboard in Resources */,
+				CFDA18DF282E772100758C20 /* Assets.xcassets in Resources */,
+				CF59046C2832AB16001374A6 /* MapView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		549152FF46D6B897CB5F463F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-radarbot/Pods-radarbot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-radarbot/Pods-radarbot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-radarbot/Pods-radarbot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69094B19B923BE8D974352A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-radarbot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFDA18CE282E771D00758C20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDA18DA282E771D00758C20 /* NewAlertViewController.swift in Sources */,
+				CF590464283266B0001374A6 /* APIManager.swift in Sources */,
+				CFDA18EC282FBEEA00758C20 /* AlertType.swift in Sources */,
+				CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */,
+				CF5904722832CAF3001374A6 /* Annotation.swift in Sources */,
+				CFDA18D6282E771D00758C20 /* AppDelegate.swift in Sources */,
+				CF5904662832679A001374A6 /* AlertService.swift in Sources */,
+				CFDA18EA282FBE1200758C20 /* Alert.swift in Sources */,
+				CF59046E2832C1A5001374A6 /* MapViewController.swift in Sources */,
+				CFC3DB2C2830A3DF007A2E44 /* AlertTypeCustomViewCell.swift in Sources */,
+				CFC3DB2A2830A2B5007A2E44 /* UIViewExtension.swift in Sources */,
+				CFDA18EE282FD03B00758C20 /* Response.swift in Sources */,
+				CFDA18D8282E771D00758C20 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CFDA18E0282E772100758C20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFDA18E1282E772100758C20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFDA18E4282E772100758C20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFDA18E5282E772100758C20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFDA18E7282E772100758C20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65189CD330C1CCD63079241 /* Pods-radarbot.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6DD2N7BND3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = radarbot/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.douglasjara.radarbot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFDA18E8282E772100758C20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A44FFF4F3285371F2777E33 /* Pods-radarbot.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6DD2N7BND3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = radarbot/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.douglasjara.radarbot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFDA18CD282E771D00758C20 /* Build configuration list for PBXProject "radarbot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDA18E4282E772100758C20 /* Debug */,
+				CFDA18E5282E772100758C20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDA18E6282E772100758C20 /* Build configuration list for PBXNativeTarget "radarbot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDA18E7282E772100758C20 /* Debug */,
+				CFDA18E8282E772100758C20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFDA18CA282E771D00758C20 /* Project object */;
+}
