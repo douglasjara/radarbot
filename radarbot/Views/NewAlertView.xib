@@ -71,6 +71,9 @@
                                                     <buttonConfiguration key="configuration" style="filled" image="icono_micro" cornerStyle="capsule" buttonSize="medium">
                                                         <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="startVoiceInput" destination="-1" eventType="touchUpInside" id="fAK-ku-pDL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

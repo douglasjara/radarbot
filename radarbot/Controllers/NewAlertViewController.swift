@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import InstantSearchVoiceOverlay
 
-class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate, MapViewControllerDelegate, UITextFieldDelegate {
-     
+class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate, MapViewControllerDelegate, UITextFieldDelegate, VoiceOverlayDelegate {
+    
+    private let voiceOverlay = VoiceOverlayController()
     private let alertService: AlertService
     private let mapViewController = MapViewController(nibName: "MapView", bundle: nil)
     private var tiposAlerta: [AlertType] = AlertType.allCases
@@ -26,6 +28,21 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var textFieldDescripcionAlerta: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textViewUbicacion: UITextView!
+    
+    @IBAction func startVoiceInput() {
+        voiceOverlay.delegate = self
+        voiceOverlay.settings.autoStart = false
+        voiceOverlay.settings.autoStop = true
+        voiceOverlay.settings.autoStopTimeout = 5
+        
+        voiceOverlay.start(on: self, textHandler: { text, final, _ in
+            if final {
+                self.textFieldDescripcionAlerta.text = String(text.prefix(100))
+            }
+        }, errorHandler: { error in
+            
+        })
+    }
     
     @IBAction func enviarAlerta(_ sender: UIButton) {
         guard let alert = self.selectedAlert else { return }
@@ -175,6 +192,11 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         DispatchQueue.main.async {
             self.textViewUbicacion.text = self.mapViewController.lastAnnotation!.address
         }
+    }
+    
+    // MARK: - VoiceOverlayDelegate
+    func recording(text: String?, final: Bool?, error: Error?) {
+        
     }
 }
 

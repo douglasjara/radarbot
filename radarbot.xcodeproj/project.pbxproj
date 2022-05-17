@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF3056BC28335E370041443C /* Pods_radarbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */; };
+		CF3056BD28335E370041443C /* Pods_radarbot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF590464283266B0001374A6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF590463283266B0001374A6 /* APIManager.swift */; };
 		CF5904662832679A001374A6 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5904652832679A001374A6 /* AlertService.swift */; };
 		CF59046928326880001374A6 /* DummyServiceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59046828326880001374A6 /* DummyServiceSettings.swift */; };
@@ -27,7 +29,23 @@
 		CFDA18F1282FD73800758C20 /* NewAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDA18F0282FD73800758C20 /* NewAlertView.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CF3056BE28335E370041443C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF3056BD28335E370041443C /* Pods_radarbot.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_radarbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A44FFF4F3285371F2777E33 /* Pods-radarbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radarbot.release.xcconfig"; path = "Target Support Files/Pods-radarbot/Pods-radarbot.release.xcconfig"; sourceTree = "<group>"; };
 		CF590463283266B0001374A6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CF5904652832679A001374A6 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		CF59046828326880001374A6 /* DummyServiceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServiceSettings.swift; sourceTree = "<group>"; };
@@ -48,6 +66,7 @@
 		CFDA18EB282FBEE900758C20 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		CFDA18ED282FD03B00758C20 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		CFDA18F0282FD73800758C20 /* NewAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewAlertView.xib; sourceTree = "<group>"; };
+		E65189CD330C1CCD63079241 /* Pods-radarbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radarbot.debug.xcconfig"; path = "Target Support Files/Pods-radarbot/Pods-radarbot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +74,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3056BC28335E370041443C /* Pods_radarbot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63FA14D88CFAB6EFEBF20F61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E65189CD330C1CCD63079241 /* Pods-radarbot.debug.xcconfig */,
+				5A44FFF4F3285371F2777E33 /* Pods-radarbot.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF5904672832679F001374A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +134,8 @@
 			children = (
 				CFDA18D4282E771D00758C20 /* radarbot */,
 				CFDA18D3282E771D00758C20 /* Products */,
+				63FA14D88CFAB6EFEBF20F61 /* Pods */,
+				E5E6486C62294DEEAAC4543C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +174,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		E5E6486C62294DEEAAC4543C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159C46CC403C293265F7B6F0 /* Pods_radarbot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFDA18E6282E772100758C20 /* Build configuration list for PBXNativeTarget "radarbot" */;
 			buildPhases = (
+				C69094B19B923BE8D974352A /* [CP] Check Pods Manifest.lock */,
 				CFDA18CE282E771D00758C20 /* Sources */,
 				CFDA18CF282E771D00758C20 /* Frameworks */,
 				CFDA18D0282E771D00758C20 /* Resources */,
+				549152FF46D6B897CB5F463F /* [CP] Embed Pods Frameworks */,
+				CF3056BE28335E370041443C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +252,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		549152FF46D6B897CB5F463F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-radarbot/Pods-radarbot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-radarbot/Pods-radarbot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-radarbot/Pods-radarbot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69094B19B923BE8D974352A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-radarbot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFDA18CE282E771D00758C20 /* Sources */ = {
@@ -362,6 +446,7 @@
 		};
 		CFDA18E7282E772100758C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65189CD330C1CCD63079241 /* Pods-radarbot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +478,7 @@
 		};
 		CFDA18E8282E772100758C20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A44FFF4F3285371F2777E33 /* Pods-radarbot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

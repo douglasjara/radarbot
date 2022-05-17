@@ -25,7 +25,8 @@ class AlertService
     
     private func getDummyUrl(latitude: Double = DummyServiceSettings.defaultLatitude, longitude: Double = DummyServiceSettings.defaultLongitude, alertType: Int, text: String) -> String
     {
-        return "\(DummyServiceSettings.serviceUrl)?lat=\(latitude)&lon=\(longitude)&alert_type=\(alertType))&text=\(text)"
+        let finalText = text.replacingOccurrences(of: " ", with: "+")
+        return "\(DummyServiceSettings.serviceUrl)?lat=\(latitude)&lon=\(longitude)&alert_type=\(alertType)&text=\(finalText)"
     }
 }
 
