@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate, MapViewControllerDelegate {
+class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AlertServiceDelegate, MapViewControllerDelegate, UITextFieldDelegate {
      
     private let alertService: AlertService
     private let mapViewController = MapViewController(nibName: "MapView", bundle: nil)
@@ -74,10 +74,18 @@ class NewAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         view.endEditing(true)
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 100
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
+    
     private func configureUIElements() {
         self.navigationController!.navigationBar.isHidden = true
         view.backgroundColor = .black
-        
+        textFieldDescripcionAlerta.delegate = self
         pageControlAlertas.numberOfPages = Int(ceil(Double(tiposAlerta.count) / 6))
         
         let cornerRadius = CGFloat(5)
