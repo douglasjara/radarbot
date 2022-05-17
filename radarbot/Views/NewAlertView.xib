@@ -37,10 +37,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OAE-E4-Or8">
-                                            <rect key="frame" x="148" y="0.0" width="118.5" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <subviews>
                                                 <textView userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Nueva alerta" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqM-xH-nns" userLabel="Text View Nueva Alerta">
-                                                    <rect key="frame" x="0.0" y="0.0" width="118.5" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="lyC-M3-So3"/>
@@ -51,19 +51,18 @@
                                                 </textView>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="znj-JG-aN0" userLabel="Stack View Descripcion">
+                                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="znj-JG-aN0" userLabel="Stack View Descripcion">
                                             <rect key="frame" x="46" y="40" width="322.5" height="61"/>
                                             <subviews>
-                                                <textField toolTip="max. 100 caracteres" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Escribe una descripción concisa" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" id="9fD-S9-T4F">
-                                                    <rect key="frame" x="15" y="8" width="244.5" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField toolTip="max. 100 caracteres" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Escribe una descripción concisa" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" id="9fD-S9-T4F">
+                                                    <rect key="frame" x="15" y="8" width="245" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bmS-9w-Lkf">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-9w-Lkf">
                                                     <rect key="frame" x="269.5" y="8" width="45" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="ZPt-VB-8JH"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="f7e-jl-h8H"/>
@@ -76,13 +75,18 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bmS-9w-Lkf" secondAttribute="trailing" constant="8" id="0At-Kf-qd9"/>
+                                                <constraint firstItem="bmS-9w-Lkf" firstAttribute="top" secondItem="znj-JG-aN0" secondAttribute="top" constant="8" id="IVm-5W-S5c"/>
+                                                <constraint firstAttribute="bottom" secondItem="bmS-9w-Lkf" secondAttribute="bottom" constant="8" id="adY-Al-RIe"/>
+                                            </constraints>
                                             <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="8"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vMb-LZ-3wB">
-                                            <rect key="frame" x="101.5" y="101" width="211" height="40"/>
+                                            <rect key="frame" x="0.0" y="101" width="414" height="40"/>
                                             <subviews>
                                                 <textView userInteractionEnabled="NO" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Selecciona una alerta..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-qv-0PA" userLabel="Text View Tipo de Alerta">
-                                                    <rect key="frame" x="0.0" y="0.0" width="211" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="P9n-TD-Yg9"/>
@@ -97,8 +101,19 @@
                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="OAE-E4-Or8" firstAttribute="top" secondItem="WUk-tD-y4t" secondAttribute="top" id="3VY-M7-oTX"/>
+                                        <constraint firstAttribute="bottom" secondItem="vMb-LZ-3wB" secondAttribute="bottom" id="8Oh-aI-hnj"/>
+                                        <constraint firstAttribute="trailing" secondItem="OAE-E4-Or8" secondAttribute="trailing" id="AHy-Xf-2oy"/>
                                         <constraint firstItem="znj-JG-aN0" firstAttribute="centerX" secondItem="WUk-tD-y4t" secondAttribute="centerX" id="D3N-ly-OnF"/>
+                                        <constraint firstAttribute="trailing" secondItem="vMb-LZ-3wB" secondAttribute="trailing" id="Iq3-Ri-soi"/>
+                                        <constraint firstItem="OAE-E4-Or8" firstAttribute="leading" secondItem="WUk-tD-y4t" secondAttribute="leading" id="fUw-mk-iRI"/>
+                                        <constraint firstItem="vMb-LZ-3wB" firstAttribute="leading" secondItem="WUk-tD-y4t" secondAttribute="leading" id="xdC-iy-Xp2"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="D3N-ly-OnF"/>
+                                        </mask>
+                                    </variation>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nsq-9p-VKw" userLabel="Stack View Collection View">
                                     <rect key="frame" x="0.0" y="141" width="414" height="158"/>
